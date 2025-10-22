@@ -10,7 +10,7 @@ COPY ./frontend/public public
 RUN npm run build
 
 # Backend
-FROM docker.io/rust:1.62.0-slim-buster
+FROM docker.io/rust:slim-trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
