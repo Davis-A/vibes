@@ -1,5 +1,5 @@
 # React frotnend
-FROM node:8 as builder
+FROM docker.io/node:8 as builder
 WORKDIR /app
 # Seprated for caching
 COPY ./frontend/package.json .
@@ -10,7 +10,7 @@ COPY ./frontend/public public
 RUN npm run build
 
 # Backend
-FROM rust:1.62.0-slim-buster
+FROM docker.io/rust:1.62.0-slim-buster
 
 ENV DEBIAN_FRONTEND=noninteractive
 
