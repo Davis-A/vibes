@@ -20,7 +20,7 @@ RUN mkdir app
 
 COPY backend/audio_gen/requirements.txt app/audio_gen/requirements.txt
 
-RUN pip3 install -r /app/audio_gen/requirements.txt
+RUN pip3 install --break-system-packages -r /app/audio_gen/requirements.txt
 
 COPY backend/Cargo.lock app/Cargo.lock
 COPY backend/Cargo.toml app/Cargo.toml
